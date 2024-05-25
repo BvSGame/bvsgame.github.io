@@ -1,5 +1,7 @@
 @import url('css/fonts.css');
 
+* {box-sizing: border-box;}
+
 body {
     font-family: 'Sofia Sans Condensed';
     margin: 0;
@@ -39,4 +41,5 @@ a {
     margin: 20px;
     max-width: 600px;
     max-height: 400px;
+    overflow: auto;
 }
