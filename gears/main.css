@@ -13,7 +13,8 @@ h1 {
 }
 a {
     background-color: rgb(38, 138, 238);
-    color: black;
+    color: inherit;
+    text-shadow: none;
     padding: 3px 8px;
     border-radius: 10px;
     text-decoration: none;
