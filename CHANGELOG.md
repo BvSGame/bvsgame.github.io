@@ -24,7 +24,7 @@ Website is not publicly available yet.
 </summary>
 
 - Now, marquee can be hidden (but the state doesn't save when you reload the webpage).
-- **Change log** – structure is rewritten. Markdown list was replaced with HTML tags, primarily `<details>` and `<summary>`.
+- **Change log** – structure is rewritten. HTML tags, `<details>` and `<summary>`, are added.
 
 ****
 
