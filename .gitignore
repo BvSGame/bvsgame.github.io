@@ -1,1 +1,16 @@
 .vscode/
+.private/
+2do/
+*.2do
+node_modules/
+/offline/
+*.bat
+docs/offline/*
+
+# REMOVE LINES BELOW FOR PUBLIC RELEASES
+/docs
+/src
+/static
+gulpfile.mjs
+package.json
+package-lock.json
