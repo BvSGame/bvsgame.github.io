@@ -11,7 +11,7 @@
   font-size: 20pt;
   font-family: 'Sofia Sans Condensed';
   color: #ffffff;
-  text-shadow: 0 1px 2px #000000;
+  text-shadow: 0 .05em .1em #000000;
 }
 body {
   margin: 0;
@@ -24,8 +24,8 @@ h1 {
 a {
   border: .1em solid rgb(38, 138, 238);
   box-shadow:
-    0 1px 2px #00000088,
-    0 1px 2px #00000088 inset;
+    0 .05em .1em #00000088,
+    0 .05em .1em #00000088 inset;
   padding: .25em .5em;
   border-radius: .5em;
   text-decoration: none;
@@ -38,8 +38,8 @@ a:hover {
   color: inherit;
   border-color: rgb(76, 200, 255);
   box-shadow:
-    0 0 20px rgba(76, 200, 255, .38),
-    0 0 20px rgba(76, 200, 255, .38) inset;
+    0 0 1em rgba(76, 200, 255, .38),
+    0 0 1em rgba(76, 200, 255, .38) inset;
   transform: scale(1.05);
   z-index: 4;
 }
@@ -48,7 +48,7 @@ a:active {
   text-shadow: none;
   border-color: rgb(76, 200, 255);
   background-color: rgb(76, 200, 255);
-  box-shadow: 0 0 38px rgb(76, 200, 255);
+  box-shadow: 0 0 2em rgb(76, 200, 255);
   transform: scale(.95);
   z-index: 4;
 }
@@ -61,7 +61,7 @@ a:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 1em;
   text-align: center;
   gap: 5%;
 }
@@ -86,10 +86,10 @@ a:active {
   color: rgb(76, 200, 255);
   font-weight: bold;
   text-shadow:
-    0 0  4.25px rgb(38, 138, 238),
-    0 0  9.5px  rgb(38, 138, 238),
-    0 0 19px    rgb(38, 138, 238),
-    0 0 38px    rgb(38, 138, 238);
+    0 0 0.25em rgb(38, 138, 238),
+    0 0 0.5em  rgb(38, 138, 238),
+    0 0 1em    rgb(38, 138, 238),
+    0 0 2em    rgb(38, 138, 238);
 }
 .readmore {
   font-size: 1.5em;
@@ -110,13 +110,13 @@ a:active {
 .links .link:nth-child(5) {animation-delay: 2s;}
 
 .logo {
-  height: 100px;
+  height: 5em;
   background-image: url('https://ia800806.us.archive.org/35/items/bvsgame/brand/logos/bvs_logo_mono_2023.png');
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  filter: drop-shadow(0 1px 2px #000000);
+  filter: drop-shadow(0 .05em .1em #000000);
 }
 .bottom {
   color: #ffffffaa;
@@ -145,14 +145,14 @@ a:active {
 .main_background > .stars_wrapper > .star {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
-  height: 2px;
-  width: 2px;
+  height: .1em;
+  width: .1em;
   background-color: #ffffff88;
   box-shadow:
-    0 0  5px rgb(38, 138, 238),
-    0 0 10px rgb(38, 138, 238),
-    0 0 20px rgb(38, 138, 238);
-  border-radius: 10000px;
+    0 0 0.25em rgb(38, 138, 238),
+    0 0 0.5em  rgb(38, 138, 238),
+    0 0 1em    rgb(38, 138, 238);
+  border-radius: 500em;
   animation: star 5s infinite, star_appears 1s 1;
 }
 
@@ -167,4 +167,29 @@ a:active {
 }
 @keyframes star_appears {
   0% {opacity: 0;}
+}
+
+@media all and (max-width: 700px) {
+  :root {font-size: 16pt;}
+}
+@media all and (max-height: 700px) {
+  :root {font-size: 16pt;}
+}
+@media all and (max-width: 500px) {
+  :root {font-size: 12pt;}
+}
+@media all and (max-height: 600px) {
+  :root {font-size: 12pt;}
+}
+@media all and (max-width: 400px) {
+  .center_box {
+    overflow: auto;
+    justify-content: flex-start;
+  }
+}
+@media all and (max-height: 450px) {
+  .center_box {
+    overflow: auto;
+    justify-content: flex-start;
+  }
 }
