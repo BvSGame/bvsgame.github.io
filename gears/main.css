@@ -12,6 +12,7 @@
   font-family: 'Sofia Sans Condensed';
   color: #ffffff;
   text-shadow: 0 .05em .1em #000000;
+  transition: font-size .2s;
 }
 body {
   margin: 0;
@@ -61,7 +62,7 @@ a:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em;
+  padding: 1em 0;
   text-align: center;
   gap: 5%;
 }
@@ -169,16 +170,22 @@ a:active {
   0% {opacity: 0;}
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 650px) {
   :root {font-size: 16pt;}
 }
-@media all and (max-height: 700px) {
+@media all and (max-height: 750px) {
   :root {font-size: 16pt;}
+}
+@media all and (max-width: 500px) {
+  :root {font-size: 14pt;}
+}
+@media all and (max-height: 600px) {
+  :root {font-size: 14pt;}
 }
 @media all and (max-width: 500px) {
   :root {font-size: 12pt;}
 }
-@media all and (max-height: 600px) {
+@media all and (max-height: 520px) {
   :root {font-size: 12pt;}
 }
 @media all and (max-width: 400px) {
