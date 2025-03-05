@@ -15,10 +15,27 @@
   transition: font-size .2s;
 }
 body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 1em 0;
   background-color: #000000;
   overflow: hidden;
+  background-image: radial-gradient(circle at bottom, rgb(38, 138, 238), #003888, #000000);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+body > * {z-index: 1;}
 h1 {
   font-family: 'Tektur';
 }
@@ -54,19 +71,6 @@ a:active {
   z-index: 4;
 }
 
-.center_box {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1em 0;
-  text-align: center;
-  gap: 5%;
-}
-
 .big_version_number {
   font-family: 'Tektur';
   font-size: 4em;
@@ -75,15 +79,15 @@ a:active {
 .big_version_number .sub {
   color: #006fff;
 }
-.top p {
-  margin: 0;
-}
-.top .text {
-  margin-bottom: 1em;
+.text {
   font-size: 1.5em;
   font-weight: 200;
+  mix-blend-mode: plus-lighter;
 }
-.top .text .glow {
+.text p {
+  margin: 0;
+}
+.text .glow {
   color: rgb(76, 200, 255);
   font-weight: bold;
   text-shadow:
@@ -95,8 +99,12 @@ a:active {
 .readmore {
   font-size: 1.5em;
   font-weight: bold;
+  margin: 1em 0;
 }
 
+.links {
+  margin: 1em 0;
+}
 .links .link:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -117,10 +125,8 @@ a:active {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  filter: drop-shadow(0 .05em .1em #000000);
 }
 .bottom {
-  color: #ffffffaa;
   mix-blend-mode: overlay;
   text-shadow: none;
 }
@@ -128,22 +134,12 @@ a:active {
   margin: 0;
 }
 
-.main_background {
+.stars_wrapper {
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
-  background-image: radial-gradient(circle at bottom, rgb(38, 138, 238), #003888, #000000);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
   z-index: 0;
-  animation: main_background 5s 1;
 }
-.main_background > .stars_wrapper {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-}
-.main_background > .stars_wrapper > .star {
+.stars_wrapper > .star {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   height: .1em;
@@ -189,13 +185,13 @@ a:active {
   :root {font-size: 12pt;}
 }
 @media all and (max-width: 400px) {
-  .center_box {
+  body {
     overflow: auto;
     justify-content: flex-start;
   }
 }
 @media all and (max-height: 450px) {
-  .center_box {
+  body {
     overflow: auto;
     justify-content: flex-start;
   }
