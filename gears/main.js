@@ -7,19 +7,19 @@ readTextFile({url: 'https://bvsgame.github.io/data/version'}, fileContent => {
   let i = 0;
   function addStar() {
     setTimeout(() => {
-      const top = Math.random() * 100;
-      const left = Math.random() * 100;
-
-      const star = document.createElement('div');
-
-      const starWrapper = document.getElementById('stars');
-      starWrapper.appendChild(star);
-
-      star.classList.add('star');
-      star.style.top = `${top}%`;
-      star.style.left = `${left}%`;
-
       if (i < num) {
+        const top = Math.random() * 100;
+        const left = Math.random() * 100;
+
+        const star = document.createElement('div');
+
+        const starWrapper = document.getElementById('stars');
+        starWrapper.appendChild(star);
+
+        star.classList.add('star');
+        star.style.top = `${top}%`;
+        star.style.left = `${left}%`;
+
         addStar();
         i++;
       }
