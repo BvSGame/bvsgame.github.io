@@ -51,7 +51,7 @@ function addStar(amountOfStars) {
 
 function rearrangeStars() {
   setInterval(() => {
-    const allStars = document.querySelectorAll('star');
+    const allStars = document.querySelectorAll('.star');
     allStars.forEach(star => {
       const top  = Math.random() * 100;
       const left = Math.random() * 100;
