@@ -17,4 +17,5 @@
   border-radius: 500em;
   margin: 0;
   animation: star 5s infinite, star_appears 5s 1;
+  transition: top 3.8s, left 3.8s;
 }

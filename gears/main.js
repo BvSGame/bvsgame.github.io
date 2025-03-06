@@ -22,6 +22,7 @@ function fire(versionNumber) {
   document.getElementById('ver').innerText = versionNumber;
   document.querySelector('body').classList.remove('loading');
   addStar(versionNumber);
+  rearrangeStars();
 }
 
 
@@ -29,7 +30,7 @@ let curentStar = 0;
 function addStar(amountOfStars) {
   setTimeout(() => {
     if (curentStar < amountOfStars) {
-      const top = Math.random() * 100;
+      const top  = Math.random() * 100;
       const left = Math.random() * 100;
 
       const star = document.createElement('div');
@@ -38,11 +39,24 @@ function addStar(amountOfStars) {
       starWrapper.appendChild(star);
 
       star.classList.add('star');
-      star.style.top = `${top}%`;
+      star.style.top  = `${top}%`;
       star.style.left = `${left}%`;
 
       addStar(amountOfStars);
       curentStar++;
     }
   }, 500 * Math.random());
+}
+
+
+function rearrangeStars() {
+  setInterval(() => {
+    const allStars = document.querySelectorAll('star');
+    allStars.forEach(star => {
+      const top  = Math.random() * 100;
+      const left = Math.random() * 100;
+      star.style.top  = `${top}%`;
+      star.style.left = `${left}%`;
+    });
+  }, 10000);
 }
