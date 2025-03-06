@@ -3,7 +3,12 @@
   top: 0; bottom: 0; left: 0; right: 0;
   z-index: 0;
   overflow: hidden;
+  transition: opacity 1.9s;
 }
+.stars_wrapper.fading {
+  opacity: 0;
+}
+
 .stars_wrapper > .star {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
@@ -17,5 +22,4 @@
   border-radius: 500em;
   margin: 0;
   animation: star 5s infinite, star_appears 5s 1;
-  transition: top 7.6s, left 7.6s;
 }

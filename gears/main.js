@@ -52,11 +52,19 @@ function addStar(amountOfStars) {
 function rearrangeStars() {
   setInterval(() => {
     const allStars = document.querySelectorAll('.star');
+    const wrapper = document.querySelector('.stars_wrapper');
+
     allStars.forEach(star => {
       const top  = Math.random() * 100;
       const left = Math.random() * 100;
-      star.style.top  = `${top}%`;
-      star.style.left = `${left}%`;
+
+      wrapper.classList.add('fading');
+
+      setTimeout(() => {
+        wrapper.classList.remove('fading');
+        star.style.top  = `${top}%`;
+        star.style.left = `${left}%`;
+      }, 1900);
     });
-  }, 12600);
+  }, 13800);
 }
