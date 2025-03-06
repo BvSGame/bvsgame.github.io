@@ -2,10 +2,19 @@ import { readTextFile } from "../src/js/modules/js_xhr_ajax/xhr_ajax.js";
 
 
 readTextFile({url: 'https://bvsgame.github.io/data/version'}, fileContent => {
-  window.addEventListener('load', () => {
+  function startApp() {
     const num = parseInt(fileContent.match(/\d+$/)[0]);
     fire(num);
-  });
+  }
+
+  if (document.readyState === 'complete')
+    startApp();
+  else {
+    document.addEventListener('readystatechange', () => {
+      if (document.readyState === 'complete')
+        startApp();
+    })
+  }
 });
 
 
