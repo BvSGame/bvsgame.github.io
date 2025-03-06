@@ -58,5 +58,5 @@ function rearrangeStars() {
       star.style.top  = `${top}%`;
       star.style.left = `${left}%`;
     });
-  }, 10000);
+  }, 12600);
 }
