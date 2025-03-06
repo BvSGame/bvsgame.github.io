@@ -1,0 +1,36 @@
+.loading_wrapper {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000cc;
+  backdrop-filter: blur(100px);
+  opacity: 0;
+  z-index: -9999;
+  transition: all 1s;
+  perspective: 1000px;
+}
+
+
+.loading_wrapper > .edx_loading_spinner {
+  transform: scale(0) rotateX(45deg);
+  --edx_loading_spinner_color: rgb(76, 200, 255);
+  transition: all .4s;
+  padding: 2em;
+}
+.loading_wrapper > .edx_loading_spinner > div {
+  filter: drop-shadow(
+    0 0 0.5em rgb(38, 138, 238)
+  );
+}
+
+
+body.loading .loading_wrapper {
+  display: flex;
+  opacity: 1;
+  z-index: 9999;
+}
+body.loading .loading_wrapper > .edx_loading_spinner {
+  transform: scale(1);
+}

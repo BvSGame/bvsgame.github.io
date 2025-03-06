@@ -1,0 +1,97 @@
+.big_version_number {
+  font-family: 'Tektur';
+  font-size: 4em;
+  font-weight: bold;
+  opacity: .8;
+  mix-blend-mode: plus-lighter;
+  text-shadow: 0 0 50px rgb(38, 138, 238);
+}
+.big_version_number .sub {
+  color: #006fff;
+}
+
+
+.text {
+  font-size: 1.5em;
+  font-weight: 200;
+  mix-blend-mode: plus-lighter;
+  margin-bottom: 1em;
+}
+.text p {
+  margin: 0;
+}
+.text .glow {
+  color: rgb(76, 200, 255);
+  font-weight: bold;
+  text-shadow:
+    0 0 0.25em rgb(38, 138, 238),
+    0 0 0.5em  rgb(38, 138, 238),
+    0 0 1em    rgb(38, 138, 238),
+    0 0 2em    rgb(38, 138, 238);
+}
+.readmore {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+  mix-blend-mode: overlay;
+  flex-wrap: wrap;
+}
+.links .link {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  animation: none;
+}
+.links .link:hover {
+  filter: drop-shadow(0 0 .5em rgba(255, 255, 255, .4));
+}
+.links .link:active {
+  filter: drop-shadow(0 0 1em #ffffff);
+}
+.links svg {
+  height: 2em;
+  width: 2em;
+  fill: #ffffff;
+}
+
+
+.logo {
+  min-width: 11em;
+  max-width: 11em;
+  height: 100%;
+  background-image: url('https://ia800806.us.archive.org/35/items/bvsgame/brand/logos/bvs_logo_mono_2023.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bottom {
+  display: flex;
+  height: 5em;
+  mix-blend-mode: overlay;
+  text-shadow: none;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  margin: 0 .5em;
+}
+.bottom_text {
+  text-align: left;
+  font-size: .75em;
+}
+.bottom_text p {
+  margin: 0;
+}
+.roadto {
+  font-size: 2em;
+  font-weight: 200;
+}

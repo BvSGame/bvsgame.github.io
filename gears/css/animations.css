@@ -1,0 +1,12 @@
+@keyframes link_color {
+  50% {color: #ffffff;}
+}
+@keyframes main_background {
+  0% {opacity: 0;}
+}
+@keyframes star {
+  50% {opacity: .4;}
+}
+@keyframes star_appears {
+  0% {opacity: 0; margin-top: 3em;}
+}

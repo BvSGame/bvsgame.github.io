@@ -1,0 +1,46 @@
+@media all and (max-width: 650px) {
+  :root {font-size: 16pt;}
+}
+@media all and (max-height: 600px) {
+  :root {font-size: 16pt;}
+}
+@media all and (max-width: 500px) {
+  :root {font-size: 14pt;}
+}
+@media all and (max-height: 480px) {
+  :root {font-size: 14pt;}
+}
+@media all and (max-width: 500px) {
+  :root {font-size: 12pt;}
+}
+@media all and (max-height: 440px) {
+  :root {font-size: 12pt;}
+}
+@media all and (max-width: 400px) {
+  body {
+    overflow: auto;
+    display: block;
+    padding: 2em 0;
+  }
+  .bottom {
+    flex-direction: column;
+    height: auto;
+  }
+  .logo {
+    min-height: 5em;
+    max-height: 5em;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+  .bottom_text {
+    text-align: inherit;
+  }
+}
+@media all and (max-height: 360px) {
+  body {
+    overflow: auto;
+    display: block;
+    padding: 2em 0;
+  }
+}

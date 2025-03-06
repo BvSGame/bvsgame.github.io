@@ -1,0 +1,20 @@
+.stars_wrapper {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.stars_wrapper > .star {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  height: .1em;
+  width: .1em;
+  background-color: #ffffff88;
+  box-shadow:
+    0 0 0.25em rgb(38, 138, 238),
+    0 0 0.5em  rgb(38, 138, 238),
+    0 0 1em    rgb(38, 138, 238);
+  border-radius: 500em;
+  margin: 0;
+  animation: star 5s infinite, star_appears 5s 1;
+}
