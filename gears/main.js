@@ -13,7 +13,7 @@ readTextFile({url: 'https://bvsgame.github.io/data/version'}, fileContent => {
     document.addEventListener('readystatechange', () => {
       if (document.readyState === 'complete')
         startApp();
-    })
+    });
   }
 });
 
@@ -32,6 +32,8 @@ function addStar(amountOfStars) {
     if (curentStar < amountOfStars) {
       const top  = Math.random() * 100;
       const left = Math.random() * 100;
+      const size = Math.random() * .2;
+      const blinkRate = 1.5 + Math.random() * 3.5;
 
       const star = document.createElement('div');
 
@@ -41,6 +43,9 @@ function addStar(amountOfStars) {
       star.classList.add('star');
       star.style.top  = `${top}%`;
       star.style.left = `${left}%`;
+      star.style.height = `${size}em`;
+      star.style.width = `${size}em`;
+      star.style.animation = `star ${blinkRate}s infinite, star_appears 5s 1`;
 
       addStar(amountOfStars);
       curentStar++;
@@ -57,6 +62,8 @@ function rearrangeStars() {
     allStars.forEach(star => {
       const top  = Math.random() * 100;
       const left = Math.random() * 100;
+      const size = Math.random() * .2;
+      const blinkRate = 1.5 + Math.random() * 3.5;
 
       wrapper.classList.add('fading');
 
@@ -64,6 +71,9 @@ function rearrangeStars() {
         wrapper.classList.remove('fading');
         star.style.top  = `${top}%`;
         star.style.left = `${left}%`;
+        star.style.height = `${size}em`;
+        star.style.width = `${size}em`;
+        star.style.animation = `star ${blinkRate}s infinite, star_appears 5s 1`;
       }, 1900);
     });
   }, 13800);
