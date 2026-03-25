@@ -1,6 +1,3 @@
-import { readTextFile } from "../modules/js_xhr_ajax/xhr_ajax.js";
-
-
 const config = {
   background: {
     stars: {
@@ -11,25 +8,23 @@ const config = {
 };
 
 
-readTextFile( { url: 'https://data.bvsga.me/version_short' }, fileContent => {
-  function startApp() {
-    const num = fileContent.match(/\d{2}$/)[ 0 ];
-    fire( num );
-  }
+function startApp() {
+  const version_MilestoneStageDay = document.getElementById( 'ver' ).innerText;
+  fire( version_MilestoneStageDay );
+}
 
-  if (document.readyState === 'complete')
-    startApp();
-  else {
-    document.addEventListener('readystatechange', () => {
-      if (document.readyState === 'complete')
-        startApp();
-    });
-  }
-});
+
+if (document.readyState === 'complete')
+  startApp();
+else {
+  document.addEventListener('readystatechange', () => {
+    if (document.readyState === 'complete')
+      startApp();
+  });
+}
 
 
 function fire( versionNumber ) {
-  document.getElementById( 'ver' ).innerText = versionNumber;
   document.querySelector( 'body' ).classList.remove( 'loading' );
   addStar(
     parseInt( versionNumber ) * config.background.stars.versionMultiplier
