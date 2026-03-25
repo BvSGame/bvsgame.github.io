@@ -1,10 +1,20 @@
-import { readTextFile } from "../src/js/modules/js_xhr_ajax/xhr_ajax.js";
+import { readTextFile } from "../modules/js_xhr_ajax/xhr_ajax.js";
 
 
-readTextFile({url: 'https://bvsgame.github.io/data/version'}, fileContent => {
+const config = {
+  background: {
+    stars: {
+      versionMultiplier: 10,
+      mainAppearanceSpeed: 500,
+    },
+  },
+};
+
+
+readTextFile( { url: 'https://bvsgame.github.io/data/version' }, fileContent => {
   function startApp() {
-    const num = parseInt(fileContent.match(/\d+$/)[0]);
-    fire(num);
+    const num = fileContent.match(/\d{2}\.\d+$/)[ 0 ];
+    fire( num );
   }
 
   if (document.readyState === 'complete')
@@ -18,10 +28,12 @@ readTextFile({url: 'https://bvsgame.github.io/data/version'}, fileContent => {
 });
 
 
-function fire(versionNumber) {
-  document.getElementById('ver').innerText = versionNumber;
-  document.querySelector('body').classList.remove('loading');
-  addStar(versionNumber);
+function fire( versionNumber ) {
+  document.getElementById( 'ver' ).innerText = versionNumber;
+  document.querySelector( 'body' ).classList.remove( 'loading' );
+  addStar(
+    parseInt( versionNumber ) * config.background.stars.versionMultiplier
+  );
   rearrangeStars();
 }
 
@@ -50,7 +62,7 @@ function addStar(amountOfStars) {
       addStar(amountOfStars);
       curentStar++;
     }
-  }, 500 * Math.random());
+  }, config.background.stars.mainAppearanceSpeed * Math.random() );
 }
 
 

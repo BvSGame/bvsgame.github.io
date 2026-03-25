@@ -5,6 +5,7 @@
   opacity: .8;
   mix-blend-mode: plus-lighter;
   text-shadow: 0 0 50px rgb(38, 138, 238);
+  line-height: 1em;
 }
 .big_version_number .sub {
   color: #006fff;
