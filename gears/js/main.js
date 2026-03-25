@@ -11,7 +11,7 @@ const config = {
 };
 
 
-readTextFile( { url: 'https://bvsgame.github.io/data/version' }, fileContent => {
+readTextFile( { url: 'https://data.bvsga.me/version' }, fileContent => {
   function startApp() {
     const num = fileContent.match(/\d{2}\.\d+$/)[ 0 ];
     fire( num );
