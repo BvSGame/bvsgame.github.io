@@ -1,2 +1,4 @@
 **/.vscode/
 /well-known/
+
+**/*.ffs_db
