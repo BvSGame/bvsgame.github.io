@@ -26,7 +26,7 @@ $version_trimmed = preg_replace( $regex['version_trimmed'], '', $version_trimmed
 <div class="stars_wrapper" id="stars"></div>
 
 <div class="big_version_number">
-  <span>Milestone 1.5</span><span class="sub"><span id="ver" value="<?=$version_trimmed; ?>"><?=$version_trimmed; ?></span></span>
+  <span>Milestone 1.5</span><span class="sub"><span id="ver"><?=$version_trimmed; ?></span></span>
 </div>
 <div class="text">
   <p>Reigniting the stars of hope… One by one…</p>
